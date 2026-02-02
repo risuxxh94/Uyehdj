@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Namami x You | 2 Years 🥂</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;500;700&family=Dancing+Script:wght@700&display=swap');
+
+        :root {
+            --accent: #ff758c;
+            --glass: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(-45deg, #ee9ca7, #ffdde1, #2193b0, #6dd5ed);
+            background-size: 400% 400%;
+            animation: nebulaFlow 15s ease infinite;
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes nebulaFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-card {
+            text-align: center;
+            padding: 45px 15px 15px;
+            width: 100%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0;
+            color: white;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-container {
+            width: 100%;
+            overflow-x: auto;
+            display: flex;
+            padding: 20px 15px;
+            gap: 15px;
+            box-sizing: border-box;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+        }
+        .gallery-container::-webkit-scrollbar { display: none; }
+
+        .memory-card {
+            min-width: 280px;
+            height: 420px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            position: relative;
+            scroll-snap-align: center;
+        }
+
+        .memory-card img { width: 100%; height: 100%; object-fit: cover; }
+        .memory-card iframe { width: 100%; height: 100%; border: none; }
+
+        .photo-label {
+            position: absolute;
+            bottom: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        .glass-card {
+            width: 92%;
+            max-width: 400px;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-radius: 30px;
+            padding: 25px;
+            margin: 12px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .timer-text { font-weight: 700; font-size: 1.7rem; color: white; }
+
+        #secretModal {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 88%;
+            max-width: 380px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 35px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+        }
+
+        button {
+            background: white;
+            color: var(--accent);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay" id="overlay" onclick="closeSecret()"></div>
+
+    <div id="secretModal">
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--accent);">Namami 🫶🏻</h2>
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; line-height: 1.6; max-height: 300px; overflow-y: auto; padding: 0 10px;">
+            HUURRR.. GOOOOOOOOOOOOODDDDDDDDD MOOOOOOOOOOORRRRRNNNNNIIINGGGGGG 🫶🏻 kaisiiii hooooo jldiiii uthoooo subhh hogyyyyyyyyyy..<br><br>
+            Ummmm wo yesb thoda s chota s aywein h👉🏻👈🏻..chl chl jyada khush na ho hogyy ab.. Happy 2 Years of US! 🥂🫶🏻..<br><br>
+            2 saal beet gis fckkkkk bhaii kbhi spne m bhi nh soche hoge dono me s koi ki hm dono itne aache dost bn jayege..school m wo ek dusre ko dekh k bhagna sala pura 9th pass m baithi thi mere pr baat nh hota th kaash aur pehle baat chalu krte..<br><br>
+            Chlo koi n..gift to tu legi nh kch milne aa nh rhi h soche th ajj wo thoda mil lete toh 👉🏻👈🏻..chl chl Jldii uth jaa aur pdhai kr.. <br><br>
+            BBBBBBBBBBBBBYYYYYEEEEEWWWWEEEE 🫶🏻<br><br>
+            <b>(FOREVER GRATEFUL FOR OUR FRIENDSHIP)</b><br>
+            <b>(YOU ARE MYYYYYY BEEEEEEEESSSSSTTTTEESSSSSTTTTTT FRIEEEENDDDDD 🫶🏻😝)</b><br>
+            <b>(BAHUT LUCKY H TU JO TERE PASS MAI HUUN😝🫶🏻🧿)</b>
+        </p>
+        <button onclick="closeSecret()" style="background: var(--accent); color: white;">Close 🤍</button>
+    </div>
+
+    <div class="hero-card">
+        <h1>NOMAAAAMMMMMIIIIII🫶🏻🧿</h1>
+    </div>
+
+    <div class="gallery-container">
+        <div class="memory-card">
+            <img src="https://drive.google.com/thumbnail?id=1ebfkgIyfhsCSVG_kQLPoygDAkCFFDnRN&sz=w1000" alt="Memory 1">
+            <div class="photo-label">Pure Magic ✨</div>
+        </div>
+        <div class="memory-card">
+            <iframe src="https://drive.google.com/file/d/11tFlHMbFow63eZSbnd6y8W_FDzI098wn/preview"></iframe>
+            <div class="photo-label">The Vibe 🎥</div>
+        </div>
+        <div class="memory-card">
+            <img src="https://drive.google.com/thumbnail?id=1k6M5vZmMwWikwsChSXVhKFsw4YTHLDjz&sz=w1000" alt="Memory 2">
+            <div class="photo-label">Bestie Days 🫂</div>
+        </div>
+        <div class="memory-card">
+            <iframe src="https://drive.google.com/file/d/194-i4YgyVU6k3ZQnVvHi32j_j2I6KIKC/preview"></iframe>
+            <div class="photo-label">Memories 🎥</div>
+        </div>
+        <div class="memory-card">
+            <img src="https://drive.google.com/thumbnail?id=1AFh0zLFQLZDhY7WdqWNe4LRMNaTSThbk&sz=w1000" alt="Memory 3">
+            <div class="photo-label">Stunning 🧿</div>
+        </div>
+        <div class="memory-card">
+            <iframe src="https://drive.google.com/file/d/1HCb7lQ8P_Kc4etr5dI_x7EPtHZyqwyQR/preview"></iframe>
+            <div class="photo-label">Happy Times 🥂</div>
+        </div>
+        <div class="memory-card">
+            <img src="https://drive.google.com/thumbnail?id=1GbLYK_ScAv-sjyTd8n-Q52rx69HZY5z0&sz=w1000" alt="Memory 4">
+            <div class="photo-label">Forever 🫶🏻</div>
+        </div>
+        <div class="memory-card"><iframe src="https://drive.google.com/file/d/1XzmJPwr_MYrR33VlBVjh-DdNUO8chdcR/preview"></iframe><div class="photo-label">Pure Chaos 🦋</div></div>
+        <div class="memory-card"><iframe src="https://drive.google.com/file/d/187Pu_S6mTySQnLm9VSIabIVInIEzw08X/preview"></iframe><div class="photo-label">Always ✨</div></div>
+        <div class="memory-card"><iframe src="https://drive.google.com/file/d/1Jbz0uSAxSotzhcerkACL2JOlAQ5gLNTi/preview"></iframe><div class="photo-label">Sweetest 🍭</div></div>
+    </div>
+
+    <div class="glass-card">
+        <div class="timer-text" id="timer">...</div>
+        <p style="margin: 8px 0 0; font-size: 0.7rem; color: white; letter-spacing: 2px; font-weight: 700;">TWO YEARS OF US</p>
+    </div>
+
+    <button onclick="celebrate()" style="margin: 15px 0;">Celebrate 🎊</button>
+
+    <div style="margin: 30px 0; text-align: center;">
+        <span style="cursor:pointer; font-size:3.5rem;" onclick="openSecret()">🫶🏻</span>
+    </div>
+
+    <script>
+        function updateTimer() {
+            const startDate = new Date();
+            startDate.setFullYear(startDate.getFullYear() - 2); 
+            const now = new Date();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            document.getElementById('timer').innerText = `${days}d ${hours}h ${minutes}m`;
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function openSecret() {
+            document.getElementById('secretModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeSecret() {
+            document.getElementById('secretModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function celebrate() {
+            const symbols = ['✨', '💖', '🌸', '🫶🏻', '🥂'];
+            for(let i=0; i<35; i++) {
+                const s = document.createElement('div');
+                s.style.position = 'fixed';
+                s.style.left = Math.random() * 100 + 'vw';
+                s.style.top = '-50px';
+                s.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+                s.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                s.style.transition = 'transform 4s linear, opacity 4s linear';
+                s.style.zIndex = '2000';
+                document.body.appendChild(s);
+                setTimeout(() => { 
+                    s.style.transform = `translateY(110vh) rotate(${Math.random() * 360}deg)`; 
+                    s.style.opacity = '0'; 
+                }, 50);
+                setTimeout(() => s.remove(), 4000);
+            }
+        }
+    </script>
+</body>
+</html>
